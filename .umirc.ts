@@ -21,7 +21,7 @@ export default defineConfig({
     },
   ],
   analytics: {
-    baidu: '',
+    baidu: '9f07d59e20c427151d526ec9d56ceaa1',
   },
   scripts: [
     `
