@@ -77,25 +77,6 @@ export default function Layout({ children, location }) {
           },
         ],
       },
-      {
-        heading: 'Other',
-        id: 'advanced',
-        items: [
-          {
-            id: 'developer',
-            children: '参与贡献',
-            icon: 'CodeBracketIcon',
-            target: '_blank',
-            href: 'https://github.com/turkyden/lizhi-app',
-          },
-          {
-            id: 'star',
-            children: '赞助我们',
-            icon: 'StarIcon',
-            href: '/#/star',
-          },
-        ],
-      },
     ],
     search,
   );
@@ -181,27 +162,6 @@ export default function Layout({ children, location }) {
           </div>
 
           <br />
-
-          <h3 className="text-gray-500 text-sm mt-8 mb-4">友情赞助</h3>
-          <div className="space-y-2">
-            <Link
-              to="/star"
-              className={`block text-white hover:text-white transition py-1 px-4 rounded hover:bg-gray-500 cursor-pointer ${
-                location.pathname.startsWith('/star') &&
-                'bg-gradient-to-t from-green-700 to-green-500 shadow shadow-green-500/50'
-              }`}
-              onClick={() => setActive('star')}
-            >
-              🧡<span className="pl-4">好物</span>
-            </Link>
-
-            <div
-              className="block text-white hover:text-white transition py-1 px-4 rounded hover:bg-gray-500 cursor-pointer"
-              onClick={() => alert('这里，已不允许你 BB ！')}
-            >
-              👽<span className="pl-4">哔哔</span>
-            </div>
-          </div>
         </div>
 
         <img
