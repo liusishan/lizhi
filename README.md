@@ -15,23 +15,23 @@
 所有资源托管于 Github 仓库, 使用 [jsdelivr](https://www.jsdelivr.com/) CDN 全球加速，你可以这样下载一首歌：
 
 ```
-https://gcore.jsdelivr.net/gh/nj-lizhi/song@master/audio/${专辑名称}/${歌名}.mp3
+https://testingcf.jsdelivr.net/gh/nj-lizhi/song@master/audio/${专辑名称}/${歌名}.mp3
 ```
 
-歌单索引 [list.js](https://gcore.jsdelivr.net/gh/nj-lizhi/song@master/audio/list.js)，会前端开发的小伙伴可以基于曲库资源 DIY 你自己的播放器 ！
+歌单索引 [list.js](https://testingcf.jsdelivr.net/gh/nj-lizhi/song@master/audio/list-v2.js)，会前端开发的小伙伴可以基于曲库资源 DIY 你自己的播放器 ！
 
 ```js
 [{
   name: "阿兰",
   artist: "专辑-108个关键词",
-  url: "https://gcore.jsdelivr.net/gh/nj-lizhi/song@master/audio/108个关键词/阿兰.mp3",
-  cover: "https://gcore.jsdelivr.net/gh/nj-lizhi/song@master/audio/108个关键词/cover.png",
+  url: "https://testingcf.jsdelivr.net/gh/nj-lizhi/song@master/audio/108个关键词/阿兰.mp3",
+  cover: "https://testingcf.jsdelivr.net/gh/nj-lizhi/song@master/audio/108个关键词/cover.png",
 },
 {
   name: "忽然",
   artist: "专辑-108个关键词",
-  url: "https://gcore.jsdelivr.net/gh/nj-lizhi/song@master/audio/108个关键词/忽然.mp3",
-  cover: "https://gcore.jsdelivr.net/gh/nj-lizhi/song@master/audio/108个关键词/cover.png",
+  url: "https://testingcf.jsdelivr.net/gh/nj-lizhi/song@master/audio/108个关键词/忽然.mp3",
+  cover: "https://testingcf.jsdelivr.net/gh/nj-lizhi/song@master/audio/108个关键词/cover.png",
 }]
 ```
 
@@ -77,15 +77,30 @@ npm run start
 
 准备申请域名 [www.李志.com](www.李志.com)
 
-- [x] 电脑网页端
-- [ ] 移动端 H5
+- [x] Web PC 端
+- [x] 客户端
+- [ ] H5 移动端
 - [ ] 评论区
 
 ## 跨平台
 
-车载系统中使用，例如特斯拉 Model 3
+基于 [Pake](https://github.com/tw93/Pake) 打包的跨平台客户端应用 App，也支持车载系统中使用。
 
-https://user-images.githubusercontent.com/24560160/187013816-6630dff6-7ab2-447d-9287-61ac876bc807.mp4
+<table>
+  <tr>
+        <td>客户端下载 ⬇️ 
+            <a href="https://github.com/tw93/Pake/releases/latest/download/LiZhi.dmg">Mac</a>
+            <a href="https://github.com/tw93/Pake/releases/latest/download/LiZhi_x64.msi">Windows</a>
+            <a href="https://github.com/tw93/Pake/releases/latest/download/LiZhi_amd64.deb">Linux</a>
+        </td>
+         <td>特斯拉 Model 3
+        </td>
+    </tr>
+    <tr>
+        <td><img src=https://cdn.fliggy.com/upic/8pPLed.png width=600/></td>
+        <td><video src="https://user-images.githubusercontent.com/24560160/187013816-6630dff6-7ab2-447d-9287-61ac876bc807.mp4"><video></td>
+    </tr>
+</table>
 
 ## 参考链接
 
@@ -97,6 +112,8 @@ https://user-images.githubusercontent.com/24560160/187013816-6630dff6-7ab2-447d-
 ## 支持者
 
 感谢大家对该项目的支持，感谢 [GoldSubmarine](https://github.com/GoldSubmarine) 发起的的音乐资源库 [nj-lizhi](https://github.com/nj-lizhi)
+  
+以及 [tw93](https://github.com/tw93) 同学提供的跨平台应用打包工具 [Pake](https://github.com/tw93/Pake) 👍
 
 [![Stargazers repo roster for @turkyden/lizhi](https://reporoster.com/stars/turkyden/lizhi)](https://github.com/turkyden/lizhi/stargazers)
 

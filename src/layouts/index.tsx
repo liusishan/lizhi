@@ -27,7 +27,10 @@ const options = {
   autoPlay: false,
   toggleMode: false,
   mode: 'full',
-  showLyric: true,
+  showLyric: false,
+  showThemeSwitch: false,
+  showReload: false,
+  // showDownload: !window.location.href.includes('from=pake'),
 };
 
 export default function Layout({ children, location }) {
@@ -123,34 +126,45 @@ export default function Layout({ children, location }) {
             </div>
           </div>
 
-          <h3 className="text-gray-500 text-sm mt-8 mb-4">所有作品</h3>
-          <div className="space-y-2">
+          <h3 className="text-gray-500 text-sm py-1"></h3>
+          <div className="space-y-4">
             <Link
               to="/"
-              className={`block text-white hover:text-white transition py-1 px-4 rounded hover:bg-gray-500 cursor-pointer ${
+              className={`block text-white hover:text-white transition py-1 px-4 rounded hover:bg-green-500 cursor-pointer ${
                 location.pathname === '/' &&
-                'bg-gradient-to-t from-green-700 to-green-500 shadow shadow-green-500/50'
+                'bg-green-500 shadow shadow-green-500/50'
               }`}
             >
-              🔢<span className="pl-4">全部</span>
+              🔢<span className="pl-4">主页</span>
             </Link>
             <Link
               to="/album/专辑-梵高先生"
-              className={`block text-white hover:text-white transition py-1 px-4 rounded hover:bg-gray-500 cursor-pointer ${
+              className={`block text-white hover:text-white transition py-1 px-4 rounded hover:bg-green-500 cursor-pointer ${
                 location.pathname.startsWith('/album') &&
-                'bg-gradient-to-t from-green-700 to-green-500 shadow shadow-green-500/50'
+                'bg-green-500 shadow shadow-green-500/50'
               }`}
             >
               💿<span className="pl-4">专辑</span>
             </Link>
             <Link
               to="/video"
-              className={`block text-white hover:text-white transition py-1 px-4 rounded hover:bg-gray-500 cursor-pointer ${
+              className={`block text-white hover:text-white transition py-1 px-4 rounded hover:bg-green-500 cursor-pointer ${
                 location.pathname.startsWith('/video') &&
-                'bg-gradient-to-t from-green-700 to-green-500 shadow shadow-green-500/50'
+                'bg-green-500 shadow shadow-green-500/50'
               }`}
             >
-              ⚡<span className="pl-4">Live</span>
+              🔥<span className="pl-4">Live</span>
+            </Link>
+            <Link
+              to="/download"
+              className={`block text-white hover:text-white transition py-1 px-4 rounded hover:bg-green-500 cursor-pointer
+              ${
+                location.pathname.startsWith('/download') &&
+                'bg-green-500 shadow shadow-green-500/50'
+              } ${window.location.href.includes('from=pake') && 'hidden'}`}
+              onClick={() => setActive('download')}
+            >
+              📦<span className="pl-4">APP</span>
             </Link>
             <a
               href="https://pan.baidu.com/s/17LHv_8gI_Ee5RJqnzSuYIg?pwd=c8af"
@@ -170,7 +184,7 @@ export default function Layout({ children, location }) {
           alt=""
         />
       </div>
-      <div className="w-[100% - 256px] h-screen overflow-y-auto p-10">
+      <div className="w-[100% - 256px] h-screen overflow-y-auto px-8 py-10">
         {children}
       </div>
       <ReactJkMusicPlayer {...options} />

@@ -79,7 +79,7 @@ export default function (props) {
             d="M10 19l-7-7m0 0l7-7m-7 7h18"
           />
         </svg>
-        <span className="pl-2">返回</span>
+        <span className="pl-2">Back</span>
       </Link>
       <div className="flex">
         <img
@@ -87,19 +87,19 @@ export default function (props) {
           src={albumList[0].cover}
           alt="cover"
         />
-        <div className="pl-10 flex flex-col justify-between">
+        <div className="pl-10 space-y-4">
           <h3 className="text-3xl text-white">{artist.replace('专辑-', '')}</h3>
-          <div className="py-4">李志</div>
+          <div className="pt-4">李志</div>
           <div className="flex space-x-4">
             <span>2007-11-12 </span>
             <span>麦田音乐</span>
             <span>发行</span>
           </div>
 
-          <div className="flex space-x-4 pt-10">
+          <div className="flex space-x-4 pt-4">
             <div
               onClick={() => onClick(albumList[0].name)}
-              className="transition hover:text-white text-center tracking-widest py-2 px-6 rounded-full bg-gradient-to-r from-green-500 to-green-400 text-white cursor-pointer hover:opacity-90 transition shadow-lg shadow-green-500/50 flex items-center"
+              className="transition hover:text-white text-center py-2 px-6 rounded-full bg-green-500 text-white cursor-pointer hover:opacity-90 shadow-lg shadow-green-500/50 flex items-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@ export default function (props) {
             </div>
             <div
               onClick={() => message.info('开发中！')}
-              className="hover:text-white text-center tracking-widest py-2 px-6 rounded-full border border-solid border-gray-500 hover:bg-gray-800 cursor-pointer flex items-center"
+              className="hidden hover:text-white text-center tracking-widest py-2 px-6 rounded-full border border-solid border-gray-500 hover:bg-gray-800 cursor-pointer flex items-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -141,16 +141,16 @@ export default function (props) {
 
       <div className="flex items-center space-x-10 pt-10">
         <div className="pb-2 cursor-pointer hover:text-green-500 text-green-500 border-0 border-solid border-b-2 border-green-500">
-          歌曲 {ALBUM.length}
+          歌曲 {albumList.length}
         </div>
         <div
-          className="pb-2 cursor-not-allowed"
+          className="hidden pb-2 cursor-not-allowed"
           onClick={() => message.info('开发中！')}
         >
           专辑信息
         </div>
         <div
-          className="pb-2 cursor-not-allowed"
+          className="hidden pb-2 cursor-not-allowed"
           onClick={() => message.info('开发中！')}
         >
           评论
@@ -189,7 +189,9 @@ export default function (props) {
                 </svg>
               </span>
               <a
-                className="cursor-pointer text-gray-500 hover:text-green-500 transition"
+                className={`cursor-pointer text-gray-500 hover:text-green-500 transition ${
+                  window.location.href.includes('from=pake') && 'hidden'
+                }`}
                 href={a.url}
                 download
               >
