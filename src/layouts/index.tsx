@@ -155,17 +155,17 @@ export default function Layout({ children, location }) {
             >
               🔥<span className="pl-4">Live</span>
             </Link>
-            <Link
-              to="/download"
-              className={`block text-white hover:text-white transition py-1 px-4 rounded hover:bg-green-500 cursor-pointer
-              ${
-                location.pathname.startsWith('/download') &&
-                'bg-green-500 shadow shadow-green-500/50'
-              } ${window.location.href.includes('from=pake') && 'hidden'}`}
-              onClick={() => setActive('download')}
-            >
-              📦<span className="pl-4">APP</span>
-            </Link>
+            {/*<Link*/}
+            {/*  to="/download"*/}
+            {/*  className={`block text-white hover:text-white transition py-1 px-4 rounded hover:bg-green-500 cursor-pointer*/}
+            {/*  ${*/}
+            {/*    location.pathname.startsWith('/download') &&*/}
+            {/*    'bg-green-500 shadow shadow-green-500/50'*/}
+            {/*  } ${window.location.href.includes('from=pake') && 'hidden'}`}*/}
+            {/*  onClick={() => setActive('download')}*/}
+            {/*>*/}
+            {/*  📦<span className="pl-4">APP</span>*/}
+            {/*</Link>*/}
             <a
               href="https://pan.baidu.com/s/17LHv_8gI_Ee5RJqnzSuYIg?pwd=c8af"
               target="_blank"
