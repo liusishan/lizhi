@@ -8,7 +8,7 @@
 
 <br/>
 
-![logos](./screenshot.png)
+![logos](https://testingcf.jsdelivr.net/gh/turkyden/lizhi/screenshot.png)
 
 ## 🌏 永久托管
 
@@ -101,6 +101,8 @@ npm run start
         <td><video src="https://user-images.githubusercontent.com/24560160/187013816-6630dff6-7ab2-447d-9287-61ac876bc807.mp4"><video></td>
     </tr>
 </table>
+
+想提特斯拉 Tesla 的同学，欢迎使用我的[ 👉 引荐链接 ](https://www.tesla.cn/referral/mhha15035)购买 Tesla 产品可获得积分，用于兑换超级充电里程额度、服饰精品和车辆配件等奖品。购车问题也可以找我沟通交流！
 
 ## 参考链接
 
